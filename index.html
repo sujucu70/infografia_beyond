@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Valor Infográfica - Beyond</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- 
+        Color Palette Selection: Corporate Colors (Beyond Black: #000000, Beyond Blue: #6D84E5, Beyond Grey: #B1B1B0, Beyond Light Grey: #E4E4E4, White: #FFFFFF)
+        SVG/Mermaid Confirmation: NEITHER Mermaid JS NOR SVG were used in this output. All visuals are rendered via Canvas (Chart.js) or structured HTML/CSS with Tailwind.
+    -->
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #6D84E5;
+            line-height: 1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#000000]">
+
+    <div class="container mx-auto p-6 md:p-10">
+
+        <!-- Section 1: Hero/Hook -->
+        <header class="text-center py-16 md:py-24 relative overflow-hidden">
+            <!-- Marca de agua en la cabecera -->
+            <div class="absolute top-4 right-4 md:top-6 md:right-6 z-0">
+                <img src="https://i.imgur.com/QK7GVqr.png" alt="Marca de agua Beyond" class="w-full md:w-[36rem] h-auto object-contain opacity-20">
+            </div>
+            <!-- Logo de la empresa en la esquina superior izquierda -->
+            <div class="absolute top-4 left-4 md:top-6 md:left-6 z-10">
+                <img src="https://i.imgur.com/jkDLPGZ.png" alt="Logo de la Empresa Beyond" class="h-8 md:h-10 object-contain">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-[#000000] leading-tight relative z-10">
+                <span class="text-[#6D84E5] px-4 rounded-md">Transforma ✦</span> tu Atención al Cliente
+            </h1>
+            <p class="mt-8 text-xl md:text-2xl max-w-3xl mx-auto text-[#000000] leading-relaxed relative z-10">
+                ¿Imaginas reducir costes, disparar la satisfacción y la capacidad de respuesta, sin complicaciones tecnológicas ni proyectos interminables?
+            </p>
+        </header>
+
+        <!-- Section 2: The Problem -->
+        <section class="my-16 bg-[#E4E4E4] rounded-lg shadow-lg p-6 md:p-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#000000]">Los Desafíos Constantes del Contact Center Tradicional</h2>
+                <p class="mt-4 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Sabemos que los sistemas tradicionales son rígidos, caros y no responden a las necesidades de la experiencia digital moderna.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold text-[#6D84E5]">Altos Costes y Lenta Respuesta</h3>
+                    <p class="mt-2 text-lg text-[#000000] mb-4 leading-relaxed">Los costes operativos elevados y los tiempos de respuesta lentos generan frustración e ineficiencia.</p>
+                    <div class="chart-container">
+                        <canvas id="costosChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold text-[#6D84E5]">Dificultad para Escalar</h3>
+                    <p class="mt-2 text-lg text-[#000000] mb-4 leading-relaxed">Manejar picos de demanda es un proceso lento y costoso que limita la flexibilidad y aumenta el abandono de llamadas.</p>
+                     <div class="chart-container">
+                        <canvas id="escalabilidadChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Solution -->
+        <section class="my-16 py-16 bg-[#B1B1B0] rounded-lg shadow-lg text-center">
+            <h2 class="text-4xl font-bold text-[#000000]">Beyond: La Transformación de su Atención al Cliente</h2>
+            <p class="mt-4 text-lg max-w-3xl mx-auto text-[#000000] leading-relaxed">Reinventamos la atención al cliente con un modelo BPO 2.0 que combina de forma inteligente la inteligencia artificial y la calidez humana. Esto se traduce en un impacto radical en la eficiencia, una adopción gradual y controlada, y una fricción cero en la implementación.</p>
+        </section>
+
+
+        <!-- Section 4: The 3 Pillars -->
+        <section class="my-16 bg-[#E4E4E4] rounded-lg shadow-lg p-6 md:p-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#000000]">¿Qué hace diferente a Beyond?</h2>
+                <p class="mt-4 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Nuestra propuesta se asienta sobre tres pilares diferenciadores.</p>
+            </div>
+            <div class="space-y-12">
+
+                <!-- Pillar 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#6D84E5]">1. Tecnología que se adapta a ti, no al revés.</h3>
+                        <p class="mt-4 text-lg text-[#000000] leading-relaxed">Combinamos IA generativa, agentes vocales inteligentes y automatización en una plataforma que se adapta e integra con tus sistemas. Esto significa procesos de atención al cliente más rápidos, eficientes, medibles y personalizados.</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="text-center p-4 border-2 border-[#B1B1B0] rounded-lg shadow-sm">
+                            <span class="text-4xl text-[#000000]">⚙️</span>
+                            <p class="font-semibold mt-2">Tus Sistemas<br>(CRM, ERP, etc.)</p>
+                        </div>
+                        <div class="flow-arrow transform md:-rotate-0">→</div>
+                        <div class="text-center p-4 border-2 border-[#6D84E5] bg-[#E4E4E4] rounded-lg shadow-inner">
+                             <span class="text-4xl text-[#000000]">🖧</span>
+                             <p class="font-semibold mt-2 text-[#6D84E5]">Plataforma Beyond<br>(IA + Orquestación)</p>
+                        </div>
+                        <div class="flow-arrow transform md:-rotate-0">→</div>
+                        <div class="text-center p-4 border-2 border-[#B1B1B0] rounded-lg shadow-sm">
+                             <span class="text-4xl text-[#000000]">💬</span>
+                             <p class="font-semibold mt-2">Cliente Final<br>(Atención fluida)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                     <div class="chart-container">
+                        <canvas id="hibridoChart"></canvas>
+                    </div>
+                    <div class="lg:order-first">
+                        <h3 class="text-2xl font-bold text-[#6D84E5]">2. Humanos + IA trabajando juntos.</h3>
+                        <p class="mt-4 text-lg text-[#000000] leading-relaxed">Con nuestro Modelo Operativo Híbrido, la eficiencia incansable de la IA se combina con la empatía de los agentes humanos. Esto se traduce en máxima eficiencia operativa, escalabilidad sin límites en picos de demanda y una satisfacción de los clientes significativamente mayor al ofrecer siempre la mejor solución.</p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#6D84E5]">3. Suscripción Flexible, sin riesgos ni barreras de entrada.</h3>
+                        <p class="mt-4 text-lg text-[#000000] leading-relaxed">Nuestro modelo elimina la necesidad de inversiones iniciales. Le permite empezar de forma progresiva, priorizando los procesos de mayor impacto y beneficiándose de una estructura de costes predecible y variable.</p>
+                         <div class="mt-6 text-center bg-[#E4E4E4] p-6 rounded-lg">
+                            <p class="text-2xl font-bold text-[#000000]">Inversión Inicial</p>
+                            <p class="text-6xl font-black text-[#6D84E5] mt-2">0€</p>
+                            <p class="text-[#000000] mt-2">Sin costes ocultos ni compromiso a largo plazo.</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="suscripcionChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 5: The Commitment -->
+        <section class="my-16 bg-[#E4E4E4] rounded-lg shadow-lg p-6 md:p-10">
+            <div class="text-center mb-12">
+                 <p class="text-xl font-semibold text-[#6D84E5]">Beyond no sustituye: evoluciona. No impone: se adapta. No promete: entrega.</p>
+                <h2 class="text-4xl font-bold text-[#000000] mt-4">Nuestra Ventaja Competitiva es su Éxito</h2>
+                <p class="mt-4 text-lg text-[#000000] max-w-3xl mx-auto leading-relaxed">Le preparamos para ofrecer la experiencia digital moderna que sus clientes demandan: inmediatez, autonomía y personalización 24/7. En Beyond, nuestro compromiso es claro:</p>
+                <p class="mt-2 text-xl font-bold text-[#000000] max-w-3xl mx-auto leading-relaxed">Su empresa alcanzará una mejora significativa en métricas clave.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <p class="text-5xl text-[#6D84E5] font-black">↓</p>
+                    <p class="mt-2 font-bold text-lg text-[#000000]">Coste por Contacto</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <p class="text-5xl text-[#6D84E5] font-black">↓</p>
+                    <p class="mt-2 font-bold text-lg text-[#000000]">Tiempo de Respuesta</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <p class="text-5xl text-[#6D84E5] font-black">↑</p>
+                    <p class="mt-2 font-bold text-lg text-[#000000]">Capacidad de Atención</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <p class="text-5xl text-[#6D84E5] font-black">↑</p>
+                    <p class="mt-2 font-bold text-lg text-[#000000]">Retención de Clientes</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Section 6: LLM-Powered Feature: Objection Handler / FAQ -->
+        <section class="my-16 bg-white rounded-lg shadow-lg p-6 md:p-10">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#000000]">¿Tienes más preguntas? Pregúntale a Beyond ✨</h2>
+                <p class="mt-2 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Introduce tu pregunta u objeción y nuestro asistente de IA te dará una respuesta basada en la propuesta de valor de Beyond.</p>
+            </div>
+            <div class="max-w-xl mx-auto">
+                <textarea id="llmInput" class="w-full p-3 border border-[#B1B1B0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6D84E5] text-[#000000]" rows="3" placeholder="Ej: ¿Es Beyond adecuado para una empresa pequeña?"></textarea>
+                <button id="llmButton" class="mt-4 w-full bg-[#6D84E5] text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg">
+                    Obtener Respuesta ✨
+                </button>
+                <div id="llmResponse" class="mt-6 p-4 bg-[#E4E4E4] rounded-lg text-[#000000] text-left min-h-[5rem] flex items-center justify-center">
+                    <p class="text-[#B1B1B0]">Tu respuesta aparecerá aquí...</p>
+                </div>
+                <div id="llmLoading" class="hidden mt-4 text-center text-[#6D84E5] font-semibold">
+                    Cargando respuesta...
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Call to Action -->
+        <footer class="my-16 bg-[#E4E4E4] rounded-lg shadow-lg p-6 md:p-10 text-center">
+            <h2 class="text-3xl font-bold text-[#000000]">¿Listo para empezar la transformación?</h2>
+            <p class="mt-4 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Descubra cómo Beyond puede aplicarse a sus necesidades sin fricciones ni sobresaltos, y sin comprometer su equipo de TI.</p>
+            <a href="mailto:contacto@beyond.com" class="mt-8 inline-block bg-[#000000] text-white font-bold py-4 px-8 rounded-lg text-lg hover:shadow-xl transition-shadow duration-300">
+                Agendar una Demostración Personalizada
+            </a>
+        </footer>
+    </div>
+
+<script>
+    function wrapLabel(str, maxWidth) {
+        if (str.length <= maxWidth) {
+            return str;
+        }
+        const words = str.split(' ');
+        let lines = [];
+        let currentLine = '';
+        words.forEach(word => {
+            if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                lines.push(currentLine);
+                currentLine = word;
+            } else {
+                currentLine = (currentLine + ' ' + word).trim();
+            }
+        });
+        if (currentLine.length > 0) {
+            lines.push(currentLine);
+        }
+        return lines;
+    }
+
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 14,
+                        family: 'Outfit'
+                    }
+                }
+            },
+            tooltip: {
+                enabled: true,
+                titleFont: { size: 16, family: 'Outfit' },
+                bodyFont: { size: 14, family: 'Outfit' },
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        } else {
+                            return label;
+                        }
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: {
+                    color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                },
+                ticks: {
+                     font: { family: 'Outfit' }
+                }
+            },
+            x: {
+                grid: {
+                    color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                },
+                 ticks: {
+                     font: { family: 'Outfit' }
+                 }
+            }
+        }
+    };
+    
+    const BEYOND_BLUE = '#6D84E5';
+    const BEYOND_BLACK = '#000000';
+    const BEYOND_GREY = '#B1B1B0';
+    const BEYOND_LIGHT_GREY = '#E4E4E4';
+
+    // Chart 1: Costos
+    const costosCtx = document.getElementById('costosChart').getContext('2d');
+    new Chart(costosCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Coste por contacto (€)', 'Tiempo medio de espera (min)'],
+            datasets: [{
+                label: 'Modelo Tradicional',
+                data: [12, 5],
+                backgroundColor: BEYOND_GREY,
+                borderColor: BEYOND_GREY,
+                borderWidth: 0
+            }, {
+                label: 'Con Beyond',
+                data: [4, 0.5],
+                backgroundColor: BEYOND_BLUE,
+                borderColor: BEYOND_BLUE,
+                borderWidth: 0
+            }]
+        },
+        options: commonOptions
+    });
+
+    // Chart 2: Escalabilidad
+    const escalabilidadCtx = document.getElementById('escalabilidadChart').getContext('2d');
+    new Chart(escalabilidadCtx, {
+        type: 'line',
+        data: {
+            labels: ['Demanda Normal', 'Pico de Demanda', 'Demanda Alta Sostenida'],
+            datasets: [{
+                label: 'Capacidad Tradicional',
+                data: [100, 70, 75],
+                fill: false,
+                borderColor: BEYOND_GREY,
+                tension: 0.1,
+                pointStyle: 'rectRot',
+                pointRadius: 5
+            },{
+                label: 'Capacidad con Beyond',
+                data: [100, 100, 100],
+                fill: true,
+                backgroundColor: 'rgba(109, 132, 229, 0.2)', /* Beyond Blue with transparency */
+                borderColor: BEYOND_BLUE,
+                tension: 0.1,
+                pointStyle: 'circle',
+                pointRadius: 5
+            }]
+        },
+        options: {
+            ...commonOptions,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 110,
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        },
+                        font: { family: 'Outfit' }
+                    }
+                },
+                 x: {
+                     grid: {
+                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    },
+                     ticks: {
+                         font: { family: 'Outfit' }
+                    }
+                }
+            }
+        }
+    });
+
+
+    // Chart 3: Hibrido
+    const hibridoCtx = document.getElementById('hibridoChart').getContext('2d');
+    new Chart(hibridoCtx, {
+        type: 'doughnut',
+        data: {
+            labels: [wrapLabel('Consultas Rutinarias y Frecuentes', 40), wrapLabel('Casos Complejos y de Valor', 40)],
+            datasets: [{
+                label: 'Distribución de Tareas',
+                data: [80, 20],
+                backgroundColor: [BEYOND_BLUE, BEYOND_BLACK],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+             plugins: {
+                legend: {
+                    position: 'bottom',
+                     labels: {
+                        font: {
+                            size: 14,
+                            family: 'Outfit'
+                        }
+                    }
+                },
+                tooltip: commonOptions.plugins.tooltip
+            }
+        }
+    });
+
+    // Chart 4: Suscripcion
+    const suscripcionCtx = document.getElementById('suscripcionChart').getContext('2d');
+    new Chart(suscripcionCtx, {
+        type: 'line',
+        data: {
+            labels: ['Inicio', 'Mes 1', 'Mes 3', 'Mes 6', 'Mes 12'],
+            datasets: [{
+                label: 'Coste Modelo Tradicional (CapEx)',
+                data: [100, 95, 90, 85, 80],
+                borderColor: BEYOND_GREY,
+                borderDash: [5, 5],
+                fill: false,
+                tension: 0.1
+            }, {
+                label: 'Coste con Beyond (OpEx)',
+                data: [0, 20, 22, 25, 28],
+                borderColor: BEYOND_BLUE,
+                backgroundColor: 'rgba(109, 132, 229, 0.2)', /* Beyond Blue with transparency */
+                fill: true,
+                tension: 0.1
+            }]
+        },
+         options: {
+            ...commonOptions,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value + 'K €'
+                        },
+                        font: { family: 'Outfit' }
+                    }
+                },
+                 x: {
+                     grid: {
+                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    },
+                     ticks: {
+                         font: { family: 'Outfit' }
+                    }
+                }
+            }
+        }
+    });
+
+    // LLM Integration Script
+    document.getElementById('llmButton').addEventListener('click', async () => {
+        const llmInput = document.getElementById('llmInput').value;
+        const llmResponseDiv = document.getElementById('llmResponse');
+        const llmLoadingDiv = document.getElementById('llmLoading');
+
+        if (!llmInput.trim()) {
+            llmResponseDiv.innerHTML = '<p class="text-red-500">Por favor, introduce una pregunta.</p>';
+            return;
+        }
+
+        llmResponseDiv.innerHTML = ''; // Clear previous response
+        llmLoadingDiv.classList.remove('hidden'); // Show loading indicator
+
+        // Contexto de la propuesta de valor de Beyond
+        const beyondValueProp = `
+            Beyond reinventa la atención al cliente con un modelo BPO 2.0 que combina de forma inteligente la inteligencia artificial y la calidez humana. Esto se traduce en un impacto radical en la eficiencia, una adopción gradual y controlada, y una fricción cero en la implementación.
+
+            Nuestra propuesta se asienta sobre tres pilares diferenciadores:
+            1. Tecnología que se adapta a ti, no al revés: Combinamos IA generativa, agentes vocales inteligentes y automatización en una plataforma que se adapta e integra con tus sistemas. Esto significa procesos de atención al cliente más rápidos, eficientes, medibles y personalizados.
+            2. Humanos + IA trabajando juntos: Con nuestro Modelo Operativo Híbrido, la eficiencia incansable de la IA se combina con la empatía de los agentes humanos. Esto se traduce en máxima eficiencia operativa, escalabilidad sin límites en picos de demanda y una satisfacción de los clientes significativamente mayor al ofrecer siempre la mejor solución.
+            3. Suscripción Flexible, sin riesgos ni barreras de entrada: Nuestro modelo elimina la necesidad de inversiones iniciales. Le permite empezar de forma progresiva, priorizando los procesos de mayor impacto y beneficiándose de una estructura de costes predecible y variable. Sin costes ocultos ni compromiso a largo plazo.
+
+            En resumen, Beyond no sustituye: evoluciona. No impone: se adapta. No promete: entrega mejoras concretas desde el primer mes.
+            Nuestro compromiso es claro: su empresa alcanzará una mejora significativa en métricas clave como el coste por contacto, el tiempo de respuesta, la capacidad de atención y la retención de clientes.
+        `;
+
+        const prompt = `Eres un experto en ventas de Beyond. Beyond es un BPO 2.0 que transforma la atención al cliente. Su propuesta de valor es:
+        ${beyondValueProp}
+
+        Un cliente potencial ha planteado la siguiente pregunta u objeción: '${llmInput}'.
+        Basándote únicamente en la propuesta de valor de Beyond, genera una respuesta concisa y persuasiva (máximo 3-4 frases) que aborde su punto. Si la pregunta no está directamente relacionada con la propuesta de valor, responde amablemente que tu función es explicar Beyond.`;
+
+        let chatHistory = [];
+        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+        const payload = { contents: chatHistory };
+        const apiKey = ""; // If you want to use models other than gemini-2.0-flash or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const result = await response.json();
+
+            if (result.candidates && result.candidates.length > 0 &&
+                result.candidates[0].content && result.candidates[0].content.parts &&
+                result.candidates[0].content.parts.length > 0) {
+                const text = result.candidates[0].content.parts[0].text;
+                llmResponseDiv.innerHTML = `<p>${text}</p>`;
+            } else {
+                llmResponseDiv.innerHTML = '<p class="text-red-500">No se pudo obtener una respuesta. Inténtalo de nuevo.</p>';
+            }
+        } catch (error) {
+            console.error('Error al llamar a la API de Gemini:', error);
+            llmResponseDiv.innerHTML = '<p class="text-red-500">Error en la conexión. Por favor, revisa tu red o inténtalo más tarde.</p>';
+        } finally {
+            llmLoadingDiv.classList.add('hidden'); // Hide loading indicator
+        }
+    });
+
+</script>
+</body>
+</html>
