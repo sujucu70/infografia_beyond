@@ -23,12 +23,12 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            height: 300px;
-            max-height: 400px;
+            height: 350px; /* Increased height */
+            max-height: 450px; /* Increased max-height */
         }
         @media (min-width: 768px) {
             .chart-container {
-                height: 350px;
+                height: 400px; /* Increased height for md breakpoint */
             }
         }
         .flow-arrow {
@@ -65,7 +65,7 @@
         <section class="my-16 bg-[#E4E4E4] rounded-lg shadow-lg p-6 md:p-10">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-[#000000]">Los Desafíos Constantes del Contact Center Tradicional</h2>
-                <p class="mt-4 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Sabemos que los sistemas tradicionales son rígidos, caros y no responden a las necesidades de la experiencia digital moderna.</p>
+                <p class="mt-4 text-lg text-[#000000] max-w-2xl mx-auto leading-relaxed">Sabemos que los sistemas tradicionales son rígidos, caros y no responden a las necesidades de la experiencia digital moderna. Un **Modelo Agéntico** puede transformar esta realidad.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-lg shadow-lg p-6">
@@ -86,9 +86,9 @@
         </section>
 
         <!-- Section 3: The Solution -->
-        <section class="my-16 py-16 bg-[#B1B1B0] rounded-lg shadow-lg text-center">
-            <h2 class="text-4xl font-bold text-[#000000]">Beyond: La Transformación de su Atención al Cliente</h2>
-            <p class="mt-4 text-lg max-w-3xl mx-auto text-[#000000] leading-relaxed">Reinventamos la atención al cliente con un modelo BPO 2.0 que combina de forma inteligente la inteligencia artificial y la calidez humana. Esto se traduce en un impacto radical en la eficiencia, una adopción gradual y controlada, y una fricción cero en la implementación.</p>
+        <section class="my-16 py-16 bg-[#000000] rounded-lg shadow-lg text-center">
+            <h2 class="text-4xl font-bold text-white">Beyond: La Transformación de su Atención al Cliente</h2>
+            <p class="mt-4 text-lg max-w-3xl mx-auto text-white leading-relaxed">Reinventamos la atención al cliente con un modelo BPO 2.0 que combina de forma inteligente la inteligencia artificial y la calidez humana. Esto se traduce en un impacto radical en la eficiencia, una adopción gradual y controlada, y una fricción cero en la implementación.</p>
         </section>
 
 
@@ -220,6 +220,7 @@
         maintainAspectRatio: false,
         plugins: {
             legend: {
+                display: true, // Explicitly set to true
                 position: 'top',
                 labels: {
                     font: {
@@ -284,7 +285,7 @@
                 borderColor: BEYOND_GREY,
                 borderWidth: 0
             }, {
-                label: 'Con Beyond',
+                label: 'Con Modelo Agéntico',
                 data: [4, 0.5],
                 backgroundColor: BEYOND_BLUE,
                 borderColor: BEYOND_BLUE,
@@ -309,7 +310,7 @@
                 pointStyle: 'rectRot',
                 pointRadius: 5
             },{
-                label: 'Capacidad con Beyond',
+                label: 'Capacidad con Modelo Agéntico',
                 data: [100, 100, 100],
                 fill: true,
                 backgroundColor: 'rgba(109, 132, 229, 0.2)', /* Beyond Blue with transparency */
@@ -366,6 +367,7 @@
             maintainAspectRatio: false,
              plugins: {
                 legend: {
+                    display: true, // Explicitly set to true
                     position: 'bottom',
                      labels: {
                         font: {
