@@ -37,6 +37,30 @@
             line-height: 1;
             font-weight: bold;
         }
+        /* Custom styles for flow boxes */
+        .flow-box {
+            text-align: center;
+            padding: 1rem; /* p-4 */
+            border-width: 2px; /* border-2 */
+            border-color: #B1B1B0; /* border-[#B1B1B0] */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            width: 12rem; /* w-48 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-box-accent {
+            border-color: #6D84E5; /* border-[#6D84E5] */
+            background-color: #E4E4E4; /* bg-[#E4E4E4] */
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+        }
+        .flow-horizontal-arrow {
+            font-size: 2.5rem; /* text-5xl */
+            color: #6D84E5;
+            font-weight: 900; /* font-black */
+        }
     </style>
 </head>
 <body class="bg-white text-[#000000]">
@@ -100,28 +124,41 @@
             </div>
             <div class="space-y-12">
 
-                <!-- Pillar 1 -->
+                <!-- Pillar 1 - Tecnología que se adapta a ti, no al revés. -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
                     <div>
                         <h3 class="text-2xl font-bold text-[#6D84E5]">1. Tecnología que se adapta a ti, no al revés.</h3>
                         <p class="mt-4 text-lg text-[#000000] leading-relaxed">Combinamos IA generativa, agentes vocales inteligentes y automatización en una plataforma que se adapta e integra con tus sistemas. Esto significa procesos de atención al cliente más rápidos, eficientes, medibles y personalizados.</p>
                     </div>
-                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-                        <div class="text-center p-4 border-2 border-[#B1B1B0] rounded-lg shadow-sm">
-                            <span class="text-4xl text-[#000000]">⚙️</span>
-                            <p class="font-semibold mt-2">Tus Sistemas<br>(CRM, ERP, etc.)</p>
+                    <!-- Diagrama de Flujo - Nuevo diseño horizontal y compacto -->
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 p-4">
+                        <!-- Entrada -->
+                        <div class="flow-box">
+                            <span class="text-4xl text-[#000000]">📞</span>
+                            <p class="font-semibold mt-2 text-base">Entrada /<br>Telefonía</p>
+                            <p class="text-xs text-slate-600">Recepción de interacciones</p>
                         </div>
-                        <div class="flow-arrow transform md:-rotate-0">→</div>
-                        <div class="text-center p-4 border-2 border-[#6D84E5] bg-[#E4E4E4] rounded-lg shadow-inner">
-                             <span class="text-4xl text-[#000000]">🖧</span>
-                             <p class="font-semibold mt-2 text-[#6D84E5]">Plataforma Beyond<br>(IA + Orquestación)</p>
+                        <span class="flow-horizontal-arrow hidden md:block">→</span>
+                        <div class="flow-arrow md:hidden">↓</div>
+
+                        <!-- Orquestación Híbrida Segura -->
+                        <div class="flow-box flow-box-accent">
+                            <span class="text-4xl text-[#000000]">🎛️</span>
+                            <p class="font-semibold mt-2 text-base text-[#6D84E5]">Orquestación Híbrida Segura</p>
+                            <p class="text-xs text-slate-600">Gestiona el flujo, Gestión de Excepciones, Trazabilidad, auditoría y seguridad</p>
                         </div>
-                        <div class="flow-arrow transform md:-rotate-0">→</div>
-                        <div class="text-center p-4 border-2 border-[#B1B1B0] rounded-lg shadow-sm">
-                             <span class="text-4xl text-[#000000]">💬</span>
-                             <p class="font-semibold mt-2">Cliente Final<br>(Atención fluida)</p>
+                        <span class="flow-horizontal-arrow hidden md:block">→</span>
+                        <div class="flow-arrow md:hidden">↓</div>
+
+                        <!-- Integración -->
+                        <div class="flow-box">
+                            <span class="text-4xl text-[#000000]">🔗</span>
+                            <p class="font-semibold mt-2 text-base">Integración</p>
+                            <p class="text-xs text-slate-600">Conexión con tus sistemas</p>
                         </div>
                     </div>
+                    <!-- Texto explicativo para el flujo -->
+                    <p class="text-sm text-slate-600 mt-4 text-center lg:col-span-2">Este flujo representa las capas principales de nuestro modelo. La Orquestación Híbrida Segura gestiona la interacción, las excepciones, la trazabilidad y la seguridad a lo largo de todo el proceso.</p>
                 </div>
 
                 <!-- Pillar 2 -->
@@ -220,7 +257,7 @@
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                display: true, // Explicitly set to true
+                display: true,
                 position: 'top',
                 labels: {
                     font: {
@@ -250,7 +287,7 @@
             y: {
                 beginAtZero: true,
                 grid: {
-                    color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    color: 'rgba(0,0,0,0.05)'
                 },
                 ticks: {
                      font: { family: 'Outfit' }
@@ -258,7 +295,7 @@
             },
             x: {
                 grid: {
-                    color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                    color: 'rgba(0,0,0,0.05)'
                 },
                  ticks: {
                      font: { family: 'Outfit' }
@@ -327,7 +364,7 @@
                     beginAtZero: true,
                     max: 110,
                     grid: {
-                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                        color: 'rgba(0,0,0,0.05)'
                     },
                     ticks: {
                         callback: function(value) {
@@ -338,7 +375,7 @@
                 },
                  x: {
                      grid: {
-                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                        color: 'rgba(0,0,0,0.05)'
                     },
                      ticks: {
                          font: { family: 'Outfit' }
@@ -367,7 +404,7 @@
             maintainAspectRatio: false,
              plugins: {
                 legend: {
-                    display: true, // Explicitly set to true
+                    display: true,
                     position: 'bottom',
                      labels: {
                         font: {
@@ -409,7 +446,7 @@
                 y: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                        color: 'rgba(0,0,0,0.05)'
                     },
                     ticks: {
                         callback: function(value) {
@@ -420,7 +457,7 @@
                 },
                  x: {
                      grid: {
-                        color: 'rgba(0,0,0,0.05)' // Subtle grid lines
+                        color: 'rgba(0,0,0,0.05)'
                     },
                      ticks: {
                          font: { family: 'Outfit' }
